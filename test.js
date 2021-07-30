@@ -6002,3 +6002,63 @@ it('Should return \'nine hundred ninety nine\' when 999 given', () => {
 
   assert.equal(readable, 'nine hundred ninety nine');
 });
+
+it('Should return \'nine hundred ninety nine\' when 1000 given', () => {
+  const readable = toReadable(1000);
+
+  assert.equal(readable, 'one thousand');
+});
+
+it('Should return \'nine hundred ninety nine\' when 1011 given', () => {
+  const readable = toReadable(1011);
+
+  assert.equal(readable, 'one thousand eleven');
+});
+
+it('Should return \'nine hundred ninety nine\' when 1023 given', () => {
+  const readable = toReadable(1023);
+
+  assert.equal(readable, 'one thousand twenty three');
+});
+
+it('Should return \'nine hundred ninety nine\' when 10123 given', () => {
+  const readable = toReadable(10123);
+
+  assert.equal(readable, 'ten thousand one hundred twenty three');
+});
+
+it('Should return \'nine hundred ninety nine\' when 123123 given', () => {
+  const readable = toReadable(123123);
+
+  assert.equal(readable, 'one hundred twenty three thousand one hundred twenty three');
+});
+
+it('Should return \'nine hundred ninety nine\' when 11340 given', () => {
+  const readable = toReadable(11340);
+
+  assert.equal(readable, 'eleven thousand three hundred forty');
+});
+
+it('Should return \'nine hundred ninety nine\' when 1000011 given', () => {
+  const readable = toReadable(1000011);
+
+  assert.equal(readable, 'one million eleven');
+});
+
+it('Should return \'nine hundred ninety nine\' when 11111111 given', () => {
+  const readable = toReadable(11111111);
+
+  assert.equal(readable, 'eleven million one hundred eleven thousand one hundred eleven');
+});
+
+it('Should return \'nine hundred ninety nine\' when 20020020 given', () => {
+  const readable = toReadable(20020020);
+
+  assert.equal(readable, 'twenty million twenty thousand twenty');
+});
+
+it('Should return \'nine hundred ninety nine\' when 1000000000 given', () => {
+  const readable = toReadable(1000000000);
+
+  assert.equal(readable, 'one billion');
+});
